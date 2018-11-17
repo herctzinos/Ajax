@@ -11,31 +11,12 @@
         <title>Welcome to Spring Web MVC project</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script>
-//            $(document).ready(function () {
-//                $("#ajaxtext").keyup(function () {
-//                    var text = $(this).val();
-//                    $.ajax({}
-//                        url: 'findname.htm?userinput=' + text,
-//                        contentType: 'application/json',
-//                        success: function (result) {
-//                            $("ajaxoutput").empty();
-//                            var jsonobj = $.parseJSON(result);
-//                            $.each(jsonobj, function (i, item) {
-//
-//                                $tr = $('<tr>').append(
-//                                        $('<td>').text(item.title)
-//                                        );
-//                                $("ajaxoutput").append($tr);
-//                            });
-//                        }
-//                    });
-//                });
-//            });
 
-$(document).ready(function () { // Οταν φορτώσει η σελίδα τρέξε....
-                $("#ajaxtext").keyup(function () { // Βάλε handler στο input type
-                    var text = $(this).val(); // Το κείμενο το χρήστη
-                    // alert(text);
+
+$(document).ready(function () {
+                $("#ajaxtext").keyup(function () { 
+                    var text = $(this).val(); 
+                    
                     $.ajax({
                         url: 'findname.htm?userinput=' + text,
                         contentType: 'aplication/json',
